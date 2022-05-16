@@ -10,4 +10,7 @@ describe("adivinar", () => {
   it("deberia verificar si una palabra fue adivinada", () => {
     expect(adivinar("hello","hello")).toEqual("EXISTE");
   });
+  it("deberia verificar si una palabra no fue adivinada", () => {
+    expect(adivinar("hello","hillo")).toEqual("NO EXISTE");
+  });
 });
