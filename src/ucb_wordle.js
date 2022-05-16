@@ -5,5 +5,8 @@ function adivinar(palabra, adivinanza){
   if (palabra === adivinanza) {
     return "EXISTE";
   }
+  else{
+    return "NO EXISTE";
+  }
 }
 export {description, adivinar};
