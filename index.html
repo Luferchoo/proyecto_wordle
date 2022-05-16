@@ -1,7 +1,8 @@
 <html>
-  <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
+  <body onload="description()">
+    <h1>WORDLE</h1>
+    <form id="wordle-form">
+      <p>"UCB Wordle es un divertido juego de palabras en el que se tiene que adivinar una palabra con 6 intentos en cada intento se mostrará las letras en las que hay coincidencias tanto en forma como posicion"</p>
       <label for="primer-numero">Primer número:</label>
       <input type="number" id="primer-numero" />
       <label for="segundo-numero">Segundo número:</label>
@@ -9,7 +10,6 @@
       <input type="submit" value="Sumar" />
     </form>
     <div id="resultado-div"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
+
