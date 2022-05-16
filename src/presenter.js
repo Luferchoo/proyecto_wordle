@@ -1,15 +1,13 @@
-import descripcion from "./ucb_wordle";
+import {adivinar} from "./ucb_wordle.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const texto = document.querySelector("#texto1");
+const form = document.querySelector("#wordle-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const adivinanza = String(texto.value);
 
-  div.innerHTML = "<p>" + descripcion() + "</p>";
+  div.innerHTML = "<p>" + adivinar("hello", adivinanza) + "</p>";
 });
