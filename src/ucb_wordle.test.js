@@ -1,4 +1,5 @@
-import description from "./ucb_wordle.js";
+import {adivinar, description}  from "./ucb_wordle";
+
 
 describe("Descripcion", () => {
   it("deberia mostrar una descripcion corta del juego", () => {
@@ -7,6 +8,6 @@ describe("Descripcion", () => {
 });
 describe("adivinar", () => {
   it("deberia verificar si una palabra fue adivinada", () => {
-    expect(adivinar("hello")).toEqual("EXISTE");
+    expect(adivinar("hello","hello")).toEqual("EXISTE");
   });
 });
