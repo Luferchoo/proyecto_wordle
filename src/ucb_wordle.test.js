@@ -1,7 +1,7 @@
-import sumar from "./sumador.js";
+import description from "./ucb_wordle.js";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+describe("Descripcion", () => {
+  it("deberia mostrar una descripcion corta del juego", () => {
+    expect(description()).toEqual("UCB Wordle es un divertido juego de palabras en el que se tiene que adivinar una palabra con 6 intentos en cada intento se mostrará las letras en las que hay coincidencias tanto en forma como posicion");
   });
 });
