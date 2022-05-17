@@ -11,7 +11,7 @@ describe("adivinar", () => {
     expect(adivinar("hello","hello")).toEqual("EXISTE");
   });
   it("deberia verificar si una palabra no fue adivinada", () => {
-    expect(adivinar("hello","hillo")).toEqual("NO EXISTE");
+    expect(adivinar("hello","hillo")).toEqual("NO EXISTE Coincidencias: l");
   });
   it("No permite ingresar caracteres vacios", () => {
     expect(adivinar("hello","")).toEqual("Ingrese una palabra para jugar");
@@ -20,6 +20,6 @@ describe("adivinar", () => {
     expect(adivinar("hello","hell")).toEqual("Ingrese una palabra de la misma longitud para jugar");
   });
   it("Muestra coincidencias en caracteres", () => {
-    expect(adivinar("mundo","lamer")).toEqual("Coincidencias: m");
+    expect(adivinar("mundo","lamer")).toEqual("NO EXISTE Coincidencias: m");
   });
 });

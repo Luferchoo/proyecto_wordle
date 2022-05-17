@@ -15,7 +15,18 @@ function adivinanza_longitud(palabra, adivinanza,comparacion){
 }
 function comparativa_palabras(palabra, adivinanza,comparacion){
   if (palabra != adivinanza) {
-    comparacion = "NO " + comparacion;
+    let suma_coincidencias = " Coincidencias: ";
+    let suma = "";
+    let coincidencia;
+    for (let indice = 0; indice < palabra.length; indice++) {
+        if (palabra.indexOf(adivinanza[indice]) !== -1) {
+            if (palabra.search(adivinanza[indice])!= indice) {
+                suma_coincidencias += adivinanza[indice];
+            }
+        }
+    }
+    suma = suma_coincidencias;
+    comparacion = "NO " + comparacion + suma;
   }
   return comparacion;
 }
@@ -24,6 +35,7 @@ function adivinar(palabra, adivinanza){
   comparativa = comparativa_palabras(palabra,adivinanza,comparativa);
   comparativa = adivinanza_longitud(palabra,adivinanza,comparativa);
   comparativa = adivinanza_vacia(adivinanza,comparativa);
+
   return comparativa;
 }
 export {description, adivinar};
