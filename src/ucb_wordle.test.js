@@ -13,4 +13,7 @@ describe("adivinar", () => {
   it("deberia verificar si una palabra no fue adivinada", () => {
     expect(adivinar("hello","hillo")).toEqual("NO EXISTE");
   });
+  it("No permite ingresar caracteres vacios", () => {
+    expect(adivinar("hello","")).toEqual("Ingrese una palabra para jugar");
+  });
 });
