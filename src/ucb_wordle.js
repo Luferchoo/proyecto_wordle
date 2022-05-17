@@ -6,6 +6,9 @@ function adivinar(palabra, adivinanza){
   if (adivinanza === "") {
     comparativa = "Ingrese una palabra para jugar";
   }
+  else if ( palabra.length != adivinanza.length) {
+    comparativa = "Ingrese una palabra de la misma longitud para jugar";
+  }
   else if (palabra != adivinanza) {
     comparativa = "NO " + comparativa;
   }
