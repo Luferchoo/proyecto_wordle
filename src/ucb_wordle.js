@@ -6,6 +6,9 @@ function adivinar(palabra, adivinanza){
   if (palabra != adivinanza) {
     comparativa = "NO " + comparativa;
   }
+  if (adivinanza === "") {
+    comparativa = "Ingrese una palabra para jugar";
+  }
   return comparativa;
 }
 export {description, adivinar};
