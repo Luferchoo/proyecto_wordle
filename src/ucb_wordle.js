@@ -19,15 +19,20 @@ function adivinanza_longitud(palabra, adivinanza,comparacion){
 function comparativa_palabras(palabra, adivinanza,comparacion){
   if (palabra != adivinanza) {
     let suma_coincidencias = " Coincidencias: ";
+    let suma_posicion = " Posicion: "
     let suma = "";
     for (let indice = 0; indice < palabra.length; indice++) {
         if (palabra.indexOf(adivinanza[indice]) !== -1) {
-            if (palabra.search(adivinanza[indice])!= indice) {
-                suma_coincidencias += adivinanza[indice];
-            }
+          if (palabra.search(adivinanza[indice]) === indice) {
+            suma_posicion += adivinanza[indice];
+          }
+          else{
+            suma_coincidencias += adivinanza[indice];
+          }
+            
         }
     }
-    suma = suma_coincidencias;
+    suma = suma_coincidencias + suma_posicion;
     comparacion = "NO " + comparacion + suma;
   }
   return comparacion;
