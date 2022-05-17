@@ -8,7 +8,7 @@ describe("Descripcion", () => {
 });
 describe("adivinar", () => {
   it("deberia verificar si una palabra fue adivinada", () => {
-    expect(adivinar("hello","hello")).toEqual("EXISTE");
+    expect(adivinar("hello","hello")).toEqual("GANASTE");
   });
   it("deberia verificar si una palabra no fue adivinada", () => {
     expect(adivinar("hello","hillo")).toEqual("NO EXISTE Coincidencias: l Posicion: hlo");
