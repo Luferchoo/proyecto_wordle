@@ -19,4 +19,7 @@ describe("adivinar", () => {
   it("No permite ingresar palabras de distinto tamaño", () => {
     expect(adivinar("hello","hell")).toEqual("Ingrese una palabra de la misma longitud para jugar");
   });
+  it("Muestra coincidencias en caracteres", () => {
+    expect(adivinar("mundo","lamer")).toEqual("Coincidencias: m");
+  });
 });
