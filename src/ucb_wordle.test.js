@@ -16,4 +16,7 @@ describe("adivinar", () => {
   it("No permite ingresar caracteres vacios", () => {
     expect(adivinar("hello","")).toEqual("Ingrese una palabra para jugar");
   });
+  it("No permite ingresar palabras de distinto tamaño", () => {
+    expect(adivinar("hello","hell")).toEqual("Ingrese una palabra de la misma longitud para jugar");
+  });
 });
