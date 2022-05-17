@@ -22,4 +22,7 @@ describe("adivinar", () => {
   it("Muestra coincidencias en caracteres", () => {
     expect(adivinar("mundo","lamer")).toEqual("NO EXISTE Coincidencias: m");
   });
+  it("Muestra coincidencias en la posicion de los caracteres", () => {
+    expect(adivinar("cerdo","carga")).toEqual("NO EXISTE Coincidencias: m Posicion: c r");
+  });
 });
