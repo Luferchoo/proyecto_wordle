@@ -3,11 +3,11 @@ function description() {
 }
 function adivinar(palabra, adivinanza){
   let comparativa = "EXISTE";
-  if (palabra != adivinanza) {
-    comparativa = "NO " + comparativa;
-  }
   if (adivinanza === "") {
     comparativa = "Ingrese una palabra para jugar";
+  }
+  else if (palabra != adivinanza) {
+    comparativa = "NO " + comparativa;
   }
   return comparativa;
 }
