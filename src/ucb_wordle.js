@@ -39,7 +39,7 @@ function comparativa_palabras(palabra, adivinanza,comparacion){
 }
 
 function adivinar(palabra, adivinanza){
-  let comparativa = "EXISTE";
+  let comparativa = "GANASTE";
   comparativa = comparativa_palabras(palabra,adivinanza,comparativa);
   comparativa = adivinanza_longitud(palabra,adivinanza,comparativa);
   comparativa = adivinanza_vacia(adivinanza,comparativa);
